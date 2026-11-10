@@ -23,12 +23,12 @@ public class ScoreChange : MonoBehaviour
     void Update()
     {
 
-        if (LastVelocity > 0 && PlayerRB.velocity.x < 0 || LastVelocity < 0 && PlayerRB.velocity.x > 0)
+        if (LastVelocity > 0 && PlayerRB.linearVelocity.x < 0 || LastVelocity < 0 && PlayerRB.linearVelocity.x > 0)
         {
             ScoreInt++;
             ScoreStr.text = "" + ScoreInt;
         }
 
-        LastVelocity = PlayerRB.velocity.x;
+        LastVelocity = PlayerRB.linearVelocity.x;
     }
 }

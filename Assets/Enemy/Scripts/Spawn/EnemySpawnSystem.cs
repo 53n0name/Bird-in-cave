@@ -32,7 +32,7 @@ public partial struct EnemySystem : ISystem
             return;
         }
 
-        Debug.Log(directionOfPlayer.ChangeCount);
+        //Debug.Log(directionOfPlayer.ChangeCount);
 
         if (directionOfPlayer.ChangeCount == 2)
         {

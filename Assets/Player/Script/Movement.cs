@@ -15,16 +15,16 @@ public class Movement : MonoBehaviour
     private void Start()
     {
         BirdTransform = GetComponent<Rigidbody2D>();
-        BirdTransform.velocity = Direction * Speed;
+        BirdTransform.linearVelocity = Direction * Speed;
     }
 
     private void Update()
     {
         if (Input.GetKeyDown("space"))
         {
-            Vector2 temp = BirdTransform.velocity;                          // remove acceleration in y
+            Vector2 temp = BirdTransform.linearVelocity;                          // remove acceleration in y
             temp.y = 0f;
-            BirdTransform.velocity = temp;
+            BirdTransform.linearVelocity = temp;
             BirdTransform.AddForce(Vector2.up * Jump, ForceMode2D.Impulse); // add force for jump
         }
     }
@@ -33,10 +33,10 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.layer == 8) {  
             Direction = -Direction;                         // after collision with wall changing direction
-            Vector2 temp = BirdTransform.velocity;          // make velocity in X zero to get it ready to add velocity in opposite direction
+            Vector2 temp = BirdTransform.linearVelocity;          // make velocity in X zero to get it ready to add velocity in opposite direction
             temp.x = 0f;                                    // use temp because i can't change it directly from the variable
-            BirdTransform.velocity = temp;
-            BirdTransform.velocity += Direction * Speed;    // add velocity to change direction into opposite
+            BirdTransform.linearVelocity = temp;
+            BirdTransform.linearVelocity += Direction * Speed;    // add velocity to change direction into opposite
         }
     }
 }

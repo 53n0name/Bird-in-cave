@@ -15,11 +15,11 @@ public class AnimationChange : MonoBehaviour
 
     private void Update()
     {
-        bool flipped = Rigidbody.velocity.x < 0;
+        bool flipped = Rigidbody.linearVelocity.x < 0;
 
         this.transform.rotation = Quaternion.Euler(new Vector2(0f, flipped ? 180f : 0f));
 
-        if (Rigidbody.velocity.y > 0)
+        if (Rigidbody.linearVelocity.y > 0)
         {
             _animator.SetBool("Flying", true);
         }

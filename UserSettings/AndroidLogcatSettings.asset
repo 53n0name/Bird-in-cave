@@ -67,6 +67,17 @@
         "DisplayIdEnabled": false,
         "DisplayId": ""
     },
+    "m_ScreenCaptureSettings": {
+        "Mode": 0,
+        "m_LastSaveLocation": [
+            "D:\\Unity\\Projects\\Bird in Cave",
+            "D:\\Unity\\Projects\\Bird in Cave"
+        ]
+    },
+    "m_QueryLayoutSettings": {
+        "LastLayoutSaveLocation": "",
+        "LastScreenshotSaveLocation": ""
+    },
     "m_InputSettings": {
         "ShiftModifier": false,
         "SendText": "",
